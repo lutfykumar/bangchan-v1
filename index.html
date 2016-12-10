@@ -64,23 +64,86 @@
           <span class="icon-bar"></span>
         </button>
         </div>
-        <div class="navi dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                            <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-                            <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
-            </ul>
-        </div>
-         <div class="shopp-cart">
-          <div class="shoppping-cart">
-            <span class="cart">10
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </span>
-          </div>
-        </div>
-
+        <ul id="navi">
+        <!--<li class="dropdown shop-cart">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                  <span class="cart">10
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      </span>
+                  </a> 
+                  <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="http://lorempixel.com/50/50/" alt="" />
+                              <span class="item-info">
+                                  <span>Item name</span>
+                                  <span>23$</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="http://lorempixel.com/50/50/" alt="" />
+                              <span class="item-info">
+                                  <span>Item name</span>
+                                  <span>23$</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a class="btn btn-primary" href="">Lihat Keranjang</a></li>
+                    </ul>
+              </li>-->
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="vendors/adminlte_v2.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span id="nama-user">Alexander Pierce</span>
+                </a>
+                <ul class="dropdown-menu">
+            
+                  <li class="user-header">
+                    <img src="vendors/adminlte_v2.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <p>
+                      Alexander Pierce - Web Developer
+                      <small>Member since Nov. 2012</small>
+                    </p>
+                  </li>
+             
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </li>
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+            </li>
+            
+            
+        </ul>
+        
         <a class="navbar-brand" href="#">Kumar</a>
       </div>
 
@@ -88,7 +151,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id="menu-left">
-          <li class="dropdown" id="drop-left">
+          <!--<li class="dropdown" id="drop-left">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
           <ul class="dropdown-menu">
           <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
@@ -96,7 +159,7 @@
               <li class="divider"></li>
               <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
           </ul>
-          </li>
+          </li>-->
           <li class="active"><a href="#">Shop</a></li>
           <li><a href="#">Aplikasi</a></li>
           <li><a href="#">Games</a></li>
@@ -107,45 +170,51 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown shop-cart">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-            <span class="cart">10
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </span>
-            </a> 
-            <ul class="dropdown-menu dropdown-cart" role="menu">
-              <li>
-                  <span class="item">
-                    <span class="item-left">
-                        <img src="http://lorempixel.com/50/50/" alt="" />
-                        <span class="item-info">
-                            <span>Item name</span>
-                            <span>23$</span>
-                        </span>
-                    </span>
-                    <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                    </span>
-                </span>
-              </li>
-              <li>
-                  <span class="item">
-                    <span class="item-left">
-                        <img src="http://lorempixel.com/50/50/" alt="" />
-                        <span class="item-info">
-                            <span>Item name</span>
-                            <span>23$</span>
-                        </span>
-                    </span>
-                    <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                    </span>
-                </span>
-              </li>
-              <li class="divider"></li>
-              <li><a class="btn btn-primary" href="">Lihat Keranjang</a></li>
-              </ul>
-          <li class="dropdown user user-menu">
+            <li id="src">
+                <a href="#search">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+                <li class="dropdown shop-cart">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                  <span class="cart">10
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                      </span>
+                  </a> 
+                  <ul class="dropdown-menu dropdown-cart" role="menu">
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="http://lorempixel.com/50/50/" alt="" />
+                              <span class="item-info">
+                                  <span>Item name</span>
+                                  <span>23$</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                          <span class="item-left">
+                              <img src="http://lorempixel.com/50/50/" alt="" />
+                              <span class="item-info">
+                                  <span>Item name</span>
+                                  <span>23$</span>
+                              </span>
+                          </span>
+                          <span class="item-right">
+                              <button class="btn btn-xs btn-danger pull-right">x</button>
+                          </span>
+                      </span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a class="btn btn-primary" href="">Lihat Keranjang</a></li>
+                    </ul>
+                  </li>
+              <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="vendors/adminlte_v2.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs">Alexander Pierce</span>
@@ -171,7 +240,7 @@
                       <a href="#">Friends</a>
                     </div>
                   </li>
-                   <li class="user-footer">
+                  <li class="user-footer">
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
@@ -181,7 +250,8 @@
                   </li>
                 </ul>
               </li>
-          </ul>
+        </ul>
+          
 
         <form class="navbar-form" action="" role="search" id="form-search">
           <div class="form-group has-feedback">
