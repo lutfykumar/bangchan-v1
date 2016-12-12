@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Awaken-Project</title>
 
@@ -14,7 +16,7 @@
     <!-- Theme admin style -->
     <link rel="stylesheet" href="vendors/adminlte_v2.3/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
+         folder instead of downloading all of them to reduce the load.-->
     <link rel="stylesheet" href="vendors/adminlte_v2.3/css/skins/_all-skins.min.css">
     <!-- Custom -->
     <link href="assets/css/custom.css" rel="stylesheet"> 
@@ -22,10 +24,10 @@
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!--[if lt IE 9]> -- >
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--[endif]-->
   </head>
   <body>
     <div id="masthead" class="site-header" role="banner">
@@ -66,11 +68,17 @@
         </button>
         </div>
         <ul id="navi">
+              <li id="aaa">
+                <a href="#srch">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+              </li>
               <li class="dropdown shop-cart">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                   <span class="cart">10
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                       </span>
+                  <span class="caret"></span>
                   </a> 
                   <ul class="dropdown-menu dropdown-cart" role="menu">
                     <li>
@@ -148,16 +156,17 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav" id="menu-left">
-          <!--<li class="dropdown" id="drop-left">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-          <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-              <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
-              <li class="divider"></li>
-              <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
-          </ul>
-          </li>-->
+        <ul class="nav navbar-nav">
+        <div id="aaaa" class="pull-left">
+          <form class="navbar-form" action="" role="search">
+          <div class="form-group has-feedback">
+            <label for="search" class="sr-only">Search</label>
+            <input type="text" class="form-control" name="search" id="search" placeholder="search">
+            <span class="glyphicon glyphicon-search form-control-feedback">
+            </span>
+          </div>
+          </form>
+          </div>
           <li class="active"><a href="#">Shop</a></li>
           <li><a href="#">Aplikasi</a></li>
           <li><a href="#">Games</a></li>
@@ -166,18 +175,18 @@
           <li><a href="#">Humor</a></li>
           <li><a href="#">News</a></li>
         </ul>
-
         <ul class="nav navbar-nav navbar-right">
             <li id="src">
-                <a href="#search">
+                <a href="#srch">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </a>
             </li>
-                <li class="dropdown shop-cart">
+                <li id="shop" class="dropdown shop-cart">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                   <span class="cart">10
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                      </span>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                  </span>
+                  <span class="caret"></span>
                   </a> 
                   <ul class="dropdown-menu dropdown-cart" role="menu">
                     <li>
@@ -212,7 +221,7 @@
                     <li><a class="btn btn-primary" href="">Lihat Keranjang</a></li>
                     </ul>
                   </li>
-              <li class="dropdown user user-menu">
+              <li id="usr" class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="vendors/adminlte_v2.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs">Alexander Pierce</span>
@@ -249,9 +258,7 @@
                 </ul>
               </li>
         </ul>
-          
-
-        <form class="navbar-form" action="" role="search" id="form-search">
+        <form id="form-search" class="navbar-form" action="" role="search">
           <div class="form-group has-feedback">
             <label for="search" class="sr-only">Search</label>
             <input type="text" class="form-control" name="search" id="search" placeholder="search">
@@ -262,7 +269,14 @@
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-    </div>
+</div>
+  <div id="srch">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="Ketikan yang anda cari.." />
+        <button type="submit" class="btn btn-danger">Search</button>
+    </form>
+  </div>
 
 
     <div class="container">
@@ -303,7 +317,7 @@
     <script src="vendors/bootstrap-3/js/bootstrap.min.js"></script>
     <!-- Custom -->
     <script src="assets/js/custom.js"></script>
-    <!-- adminlte_v2.3 -->
-    <script src="vendors/adminlte_v2.3/js/app.min.js"></script>
+    <!-- adminlte_v2.3
+    <script src="vendors/adminlte_v2.3/js/app.min.js"></script> -->
    </body>
 </html>

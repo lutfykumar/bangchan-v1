@@ -15,3 +15,24 @@ jQuery(document).ready(function () {
 		}
 	})
 })
+
+$(function () {
+    $('a[href="#srch"]').on('click', function(event) {
+        event.preventDefault();
+        $('#srch').addClass('open');
+        $('#srch > form > input[type="search"]').focus();
+    });
+    
+    $('#srch, #srch button.close').on('click keyup', function(event) {
+        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+            $(this).removeClass('open');
+        }
+    });
+    
+    
+    //Do not include! This prevents the form from submitting for DEMO purposes only!
+    $('form').submit(function(event) {
+        event.preventDefault();
+        return false;
+    })
+});
